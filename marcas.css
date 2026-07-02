@@ -1,0 +1,8 @@
+article img {
+    display: block; /* Transforma a imagem em um bloco isolado */
+    margin: 25px auto; /* O 'auto' nas laterais é o que faz a mágica de centralizar */
+    max-width: 100%; /* Garante que a foto não vaze da tela no celular */
+    height: auto; /* Mantém a proporção correta da imagem */
+    border-radius: 8px; /* Deixa as pontinhas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 77, 64, 0.15); /* Adiciona uma sombra elegante */
+}

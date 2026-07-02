@@ -1,0 +1,94 @@
+
+#educativo {
+    margin-top: 20px;
+}
+
+/*caixas lado a lado */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.material-box {
+    background-color: #ffffffdd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 96, 87, 0.1);
+    border-top: 6px solid #00796b;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.material-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 96, 87, 0.2);
+}
+
+.material-box h3 {
+    color: #00695c;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.material-box p {
+    color: #37474f;
+    font-size: 1.05em;
+    text-align: justify;
+}
+
+
+@media (max-width: 480px) {
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.box-duplo {
+    grid-column: 1 / -1 !important; /* O !important força a caixa a ocupar a linha inteira do grid */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.box-duplo .texto-box {
+    flex: 1; 
+}
+
+.box-duplo .texto-box p {
+    text-align: left; 
+}
+
+.box-duplo .imagem-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.box-duplo .imagem-box {
+    flex: 1; /* Garante que a div tenha 50% do espaço */
+    width: 100%;
+    display: flex;
+}
+
+.box-duplo .imagem-box img {
+    width: 100% !important; /* Obriga a ocupar toda a largura da sua metade */
+    height: 250px !important; /* Dá uma altura boa e padronizada */
+    object-fit: cover !important; /* Preenche a área cortando as sobras em vez de amassar a foto */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 0 !important;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+    .box-duplo {
+        flex-direction: column;
+    }
+}
